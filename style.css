@@ -10,19 +10,6 @@
     text-decoration: none;
 }
 
-/*.logo {
-    width: 2em;
-    height: 2em;
-    position: fixed;
-    z-index: 100;
-    right: 3em;
-    top: 3em;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    cursor: pointer;
-}*/
-
 .logo {
     width: 3em;
     height: 3em;
@@ -50,23 +37,6 @@ header {
     min-height: 100vh;
     overflow: hidden;
 }
-
-/*
-.img-wrapper {
-    height: 100vh;
-    width: 100%;
-    overflow: hidden;
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-.img-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.5;
-    animation: zoom 25s;
-}
-*/
 
 .img-wrapper {
     position: relative;
@@ -209,4 +179,22 @@ header {
     color: #7f61ac;
     font-size: 5.1em;
     opacity: 1;
+}
+
+.sessao-sobre {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.sobre-header {
+    height: 10vh;
+    align-self: center;
+}
+
+.conhecimentos {
+    height: 90vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 50%);
 }
