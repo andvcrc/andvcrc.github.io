@@ -10,11 +10,29 @@
     text-decoration: none;
 }
 
+body {
+    background: linear-gradient(45deg, #F0EBE3, #E4DCCF, #7D9D9C, #576F72);
+    background-size: 300% 300%;
+    animation: colors 15s ease infinite;
+}
+
+@keyframes colors {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 .logo {
     width: 3em;
     height: 3em;
     position: fixed;
-    z-index: 100;
+    z-index: 10000;
     right: 2em;
     top: 2em;
 }
@@ -41,7 +59,7 @@ header {
 .img-wrapper {
     position: relative;
     height: 100vh;
-    background-image: url(images/image-01.jpg);
+    background: url(images/image-01.jpg);
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
@@ -118,11 +136,12 @@ header {
     right: 0;
     top: 0;
     display: none;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgb(168, 168, 168);
 }
 
 .side-bar.show {
     display: block;
+    z-index: 1000;
 }
 
 .menu {
@@ -182,19 +201,150 @@ header {
 }
 
 .sessao-sobre {
-    height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
 .sobre-header {
-    height: 10vh;
+    height: 15vh;
     align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+    margin: 5% 10% 10% 10%;
+    border-bottom: solid 5px white;
+    border-radius: 5px;
+}
+
+.sobre-header h1 {
+    font-size: 6em;
+    color: white;
+    text-shadow: 0.1em 0.1em 1px rgba(0, 0, 0, 0.4);
 }
 
 .conhecimentos {
-    height: 90vh;
+    height: 70vh;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 50%);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 70%);
+    gap: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.card {
+    background-image: linear-gradient(#333, #333);
+    overflow: hidden;
+    border-radius: 16px;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.7) 0px 5px 15px;
+}
+
+.card#first:hover {
+    background-image: linear-gradient(#fcc74c, #fda632);
+}
+
+.card#second:hover {
+    background-image: linear-gradient(rgb(255, 254, 203), rgb(255, 235, 53));
+}
+
+.card#third:hover {
+    color: white;
+    background-image: linear-gradient(rgb(53, 124, 255), #264de4);
+}
+
+.card#fourth:hover {
+    color: white;
+    background-image: linear-gradient(#8c3dff, #a264ff);
+}
+
+.card#third .arrow, .card#fourth .arrow {
+    color: white;
+}
+
+.card .img {
+    background-position: center bottom;
+    background-size: cover;
+    width: 100%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: .8;
+    transition: all .5s;
+}
+
+.card .img#sobre {
+    background-image: url(images/card-book.jpg);
+}
+.card .img#js {
+    background-image: url(images/card-js.jpg);
+}
+
+.card .img#css {
+    background-image: url(images/card-css.jpg);
+}
+
+.card .img#github {
+    background-image: url(images/card-git.jpg);
+}
+
+.card:hover .img {
+    opacity: 1;
+    width: 110%;
+} 
+
+.card .content {
+    padding: 0 20px;
+    overflow: hidden;
+    height: 0;
+    transition: all .5s;
+    transform: translateY(2em);
+    opacity: 0;
+}
+
+.card:hover .content {
+    padding: 15px 20px;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    transform: translateY(0);
+    opacity: 1;
+}
+
+::-webkit-scrollbar {
+    background-color: #1d1d1d;
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #cacaca;
+    border-radius: 5px;
+}
+
+.card .content .title {
+    font-size: 2em;
+}
+
+.card .content .desc {
+    padding-top: 10px;
+}
+
+.card .arrow {
+    color: white;
+    padding: 10px;
+    font-size: 1.5em;
+    transition: all .5s;
+    transform: rotate(-180deg);
+}
+
+.card:hover .arrow {
+    color: black;
+    transform: rotate(0);
 }
