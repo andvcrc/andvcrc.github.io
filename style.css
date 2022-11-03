@@ -14,19 +14,7 @@ body {
     background-image: url(images/tijolos.jpg);
 }
 
-@keyframes colors {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-.logo {
+.menu-icon {
     width: 3em;
     height: 3em;
     position: fixed;
@@ -35,7 +23,7 @@ body {
     top: 2em;
 }
 
-.logo i {
+.menu-icon i {
     font-size: 3em;
     color: black;
 }
@@ -48,7 +36,7 @@ header {
     overflow: hidden;
 }
 
-.img-wrapper {
+.introduction {
     margin: 5% 10%;
     position: relative;
     height: 100vh;
@@ -56,23 +44,6 @@ header {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 30%);
     animation: zoom 25s;
-}
-
-.img-wrapper:nth-child(1) .textos {
-    grid-row: 2 / 3;
-    grid-column: 1 / 2;
-}
-
-.imagem {
-    width: 80%;
-    margin: 5%;
-    height: 80%;
-    box-shadow: 5px 5px 10px #000;
-    grid-row: 1 / 4;
-    grid-column: 2 / 3 ;
-    background-image: url(images/image-01.jpg);
-    background-size: cover;
-    background-position: center top;
 }
 
 @keyframes zoom {
@@ -83,6 +54,23 @@ header {
     100% {
         transform: scale(1);
     }
+}
+
+.introduction:nth-child(1) .texts {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+}
+
+.image {
+    width: 80%;
+    margin: 5%;
+    height: 80%;
+    box-shadow: .5em .5em .3em rgba(0, 0, 0, 0.7);
+    grid-row: 1 / 4;
+    grid-column: 2 / 3 ;
+    background-image: url(images/image-01.jpg);
+    background-size: cover;
+    background-position: center top;
 }
 
 .banner h1 {
@@ -195,14 +183,14 @@ header {
     opacity: 1;
 }
 
-.sessao-sobre {
+.about {
     display: flex;
     flex-direction: column;
     background-color: rgba(255, 255, 255, .1);
     border-radius: 5em;
 }
 
-.sobre-header {
+.about-header {
     height: 15vh;
     align-self: center;
     display: flex;
@@ -215,12 +203,12 @@ header {
     text-shadow: 0.4em 0.4em 1px rgba(0, 0, 0, .8);
 }
 
-.sobre-header h1 {
+.about-header h1 {
     font-size: 5em;
     color: white;
 }
 
-.sobre-texto {
+.about-text {
     text-align: justify;
     text-indent: 2em;
     margin: 0 15% 3% 15%;
@@ -234,7 +222,17 @@ header {
     flex-direction: column;
 }
 
-.sobre-texto a {
+@keyframes textTransition {
+    0% {
+        transform: translateX(15em);
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.about-text a {
     margin-top: 1em;
     text-align: center;
     text-indent: 0;
@@ -244,22 +242,12 @@ header {
     align-self: center;
 }
 
-.sobre-texto a:hover {
+.about-text a:hover {
     text-transform: uppercase;
     font-size: 1.6em;
     color: white;
     background-color: salmon;
     border-radius: 1em;
-}
-
-@keyframes textTransition {
-    0% {
-        transform: translateX(15em);
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
 }
 
 .conhecimentos {

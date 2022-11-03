@@ -1,4 +1,4 @@
-const logo = document.querySelector('.logo')
+const logo = document.querySelector('.menu-icon')
 
 logo.addEventListener('click', function() {
     document.querySelector('.side-bar').classList.toggle('show')
