@@ -44,11 +44,6 @@ header {
     }
 }
 
-/*.introduction:nth-child(1) .texts {
-    grid-row: 2 / 3;
-    grid-column: 1 / 2;
-}*/
-
 .frame {
     display: flex;
     justify-content: center;
@@ -58,7 +53,7 @@ header {
     width: 80%;
     margin: 5%;
     height: 80%;
-    box-shadow: .5em .5em .3em rgba(0, 0, 0, 0.7);
+    box-shadow: .5em .5em .3em rgba(0, 0, 0, 0.4);
     background-image: url(images/image-01.jpg);
     background-size: cover;
     background-position: center top;
@@ -115,12 +110,21 @@ header {
     position: fixed;
     top: 0;
     background-color: rgba(0, 0, 0, .6);
-    box-shadow: 0.3em 0.3em 2px rgba(0, 0, 0, 0.6);
+    box-shadow: 0.3em 0.3em 2px rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(5px);
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     z-index: 5;
+}
+
+.logo {
+    box-sizing: border-box;
+}
+
+.logo img {
+    padding-top: 5px;
+    height: clamp(1em, 2em + 1vw, 3em);
 }
 
 .menu-button {
@@ -193,7 +197,7 @@ header {
     border-radius: 5em;
 }
 
-.about-header {
+.page-title {
     height: 20vh;
     align-self: center;
     display: flex;
@@ -206,7 +210,7 @@ header {
     text-shadow: 0.4em 0.4em 1px rgba(0, 0, 0, .8);
 }
 
-.about-header h1 {
+.page-title h1 {
     font-size: clamp(1.75em, 4em + 3vw, 7em);
     text-align: center;
     color: white;
@@ -227,6 +231,7 @@ header {
     flex-direction: column;
     background-color: rgba(0, 0, 0, .6);
     border-radius: 15px;
+    box-shadow: 0.3em 0.3em 2px rgba(0, 0, 0, 0.4);
 }
 
 @keyframes textTransition {
@@ -261,8 +266,8 @@ header {
 
 .conhecimentos {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 50vh);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 30vh);
     gap: 5em;
     margin-left: 15%;
     margin-right: 15%;
@@ -299,6 +304,15 @@ header {
     background-image: linear-gradient(#8c3dff, #a264ff);
 }
 
+.card#fifth:hover {
+    color: black;
+    background-image: linear-gradient(#e34f26, #e97a5b);
+}
+
+.card#sixth:hover {
+    background-image: linear-gradient(#78eb52, #a5e58f);
+}
+
 .card#third .arrow,
 .card#fourth .arrow {
     color: white;
@@ -332,6 +346,14 @@ header {
     background-image: url(images/card-git.jpg);
 }
 
+.card .img#html {
+    background-image: url(images/card-html.jpg);
+}
+
+.card .img#node-js {
+    background-image: url(images/card-node.jpg);
+}
+
 .card:hover .img {
     opacity: 1;
     width: 110%;
@@ -361,7 +383,7 @@ header {
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #cacaca;
+    background-color: #e0e0e0;
     border-radius: 5px;
 }
 
@@ -385,6 +407,44 @@ header {
     color: black;
     transform: rotate(0);
 }
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 60vh);
+    background-color: rgba(0, 0, 0, .6);
+    margin-right: 15vw;
+    margin-left: 15vw;
+    border-radius: 1em;
+}
+
+.project {
+    background-color: rgba(255, 255, 255, .4);
+    margin: 1em;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-img {
+    width: 100%;
+    height: 40%;
+} 
+
+.project-img#pi1 {
+    background-size: cover;
+    background-position: center;
+    background-image: url(images/card-book.jpg);
+}
+
+.project#first-project {
+    margin-right: .5em;
+}
+
+.project#second-project {
+    margin-left: .5em;
+}
+
 
 .top-bar.active {
     display: flex;
@@ -426,6 +486,7 @@ header {
 @media (max-width: 700px) {
     .menu {
         display: none;
+        font-size: 1.5em;
     }
 
     .social-media {
@@ -435,6 +496,7 @@ header {
     .top-bar {
         position: fixed;
         top: 0;
+        font-size: 1.5em;
         height: 5vh;
     }
 
@@ -454,7 +516,6 @@ header {
         margin: 0;
         width: 90%;
     }
-
 }
 
 @media (max-width: 1000px) {
@@ -467,15 +528,16 @@ header {
         margin-left: 15%;
         margin-right: 15%;
     }
+
+    .about-text {
+        text-align: center;
+    }
 }
 
 @media (max-width: 800px) {
     .conhecimentos {
         display: flex;
         flex-direction: column;
-        /*grid-template-columns: repeat(1, .6fr);
-        grid-template-rows: repeat(4, 30vh);
-        gap: 3em;*/
         margin-left: 15%;
         margin-right: 15%;
     }

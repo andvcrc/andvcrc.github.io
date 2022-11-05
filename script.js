@@ -1,4 +1,4 @@
-const nav = document.querySelector('.side-bar')
+const nav = document.querySelector('.top-bar')
 const btnMenu = document.querySelector('.menu-button')
 const menu = document.querySelector('.menu')
 
