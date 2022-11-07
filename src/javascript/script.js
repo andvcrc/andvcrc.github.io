@@ -1,3 +1,4 @@
+/* -------------------- MENU MOBILE --------------------*/
 const nav = document.querySelector('.top-bar')
 const btnMenu = document.querySelector('.menu-button')
 const menu = document.querySelector('.menu')
@@ -9,12 +10,11 @@ function handleButtonClick(event) {
 
 btnMenu.addEventListener('click', handleButtonClick)
 btnMenu.addEventListener('touchstart', handleButtonClick)
+/* ---------------------------------------------------- */
 
 
 
-
-
-
+/* ---------- BOTÃO DO CARROSSEL ---------- */
 const btnSlide1 = document.querySelector('#slide1')
 const btnSlide2 = document.querySelector('#slide2')
 const btnSlide3 = document.querySelector('#slide3')
@@ -52,3 +52,4 @@ function trocaSlide3() {
 btnSlide1.addEventListener('click', trocaSlide1)
 btnSlide2.addEventListener('click', trocaSlide2)
 btnSlide3.addEventListener('click', trocaSlide3)
+/* ---------------------------------------- */
