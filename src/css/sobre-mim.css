@@ -98,7 +98,8 @@
 }
 
 .card#sixth:hover {
-    background-image: linear-gradient(#78eb52, #a5e58f);
+    background-image: linear-gradient(to top, #78eb52, #4655b4);
+    color: black;
 }
 
 .card#third .arrow,
@@ -118,7 +119,7 @@
     transition: all .5s;
 }
 
-.img#sobre {
+.img#java {
     background-image: url(../images/cards/card-java.jpg);
 }
 
@@ -139,7 +140,7 @@
 }
 
 .img#node-js {
-    background-image: url(../images/cards/card-node.jpg);
+    background-image: url(../images/cards/card-node-c.jpg);
 }
 
 .card:hover .img {
