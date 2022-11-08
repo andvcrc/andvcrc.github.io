@@ -3,13 +3,13 @@
 }
 
 .slides {
-    height: 80vh;
+    height: 90vh;
     margin-right: 15%;
     margin-left: 15%;
     overflow: hidden;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(1, 60vh) repeat(1, 20vh);
+    grid-template-rows: repeat(1, 80vh) repeat(1, 12vh);
     justify-items: center;
     align-items: center;
 }
@@ -52,10 +52,11 @@
     border-radius: 1em;
     color: black;
     font-size: 1.2em;
+    transition: all .5s;
 }
 
 .button:hover {
-    background-color: black;
+    background-color: rgb(5, 170, 170);
     color: white;
 }
 
@@ -95,13 +96,21 @@
 }
 
 .selection:hover {
+    background-color: rgba(255, 255, 255, .4);
+}
+
+.selection.active:hover {
     background-color: white;
+}
+
+.inactive {
+    display: none;
 }
 
 @media (max-height: 700px) {
     .slides {
-        height: 100vh;
-        grid-template-rows: repeat(1, 80vh) repeat(1, 20vh);
+        height: 92vh;
+        grid-template-rows: repeat(1, 80vh) repeat(1, 12vh);
     }
     .card-project {
         align-self: flex-start;

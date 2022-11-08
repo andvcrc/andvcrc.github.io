@@ -53,7 +53,7 @@
 }
 
 .menu-link:hover {
-    background-color: black;
+    background-color: rgb(5, 170, 170);
     color: white;
     transition: color .5s;
 }
@@ -82,7 +82,13 @@
 }
 
 .social-media a:nth-child(2) i:hover {
-    color: #7f61ac;
+    color: #8c3dff;
+    font-size: clamp(1.2em, 2.2em + 3vw, 5.2em);
+    opacity: 1;
+}
+
+.social-media a:nth-child(3) i:hover {
+    color: #0e76a8;
     font-size: clamp(1.2em, 2.2em + 3vw, 5.2em);
     opacity: 1;
 }

@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/css/style.css" type="text/css"  media="screen">
-    <link rel="stylesheet" href="src/css/inicio.css" type="text/css"  media="screen">
-    <link rel="stylesheet" href="src/css/menu-superior.css" type="text/css"  media="screen">
-    <link rel="stylesheet" href="src/css/sobre-mim.css" type="text/css"  media="screen">
-    <link rel="stylesheet" href="src/css/projetos.css" type="text/css"  media="screen">
+    <link rel="stylesheet" href="src/css/style.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="src/css/inicio.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="src/css/menu-superior.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="src/css/sobre-mim.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="src/css/projetos.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="src/css/contato.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="src/css/rodape.css" type="text/css" media="screen">
     <link rel="apple-touch-icon" sizes="180x180" href="src/images/icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="src/images/icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="src/images/icons/favicon-16x16.png">
@@ -51,19 +53,19 @@
                     <ul class="menu">
 
                         <li class="menu-item">
-                            <a href="" class="menu-link">Início</a>
+                            <a href="#inicio" class="menu-link">Início</a>
                         </li>
 
                         <li class="menu-item">
-                            <a href="" class="menu-link">Sobre</a>
+                            <a href="#sobre-mim" class="menu-link">Sobre</a>
                         </li>
 
                         <li class="menu-item">
-                            <a href="" class="menu-link">Projetos</a>
+                            <a href="#projetos" class="menu-link">Projetos</a>
                         </li>
 
                         <li class="menu-item">
-                            <a href="" class="menu-link">Contato</a>
+                            <a href="#contato" class="menu-link">Contato</a>
                         </li>
 
                     </ul>
@@ -71,6 +73,7 @@
                 <div class="social-media">
                     <a href=""><i class="fa-brands fa-square-instagram"></i></a>
                     <a href=""><i class="fa-brands fa-square-github"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
                 </div>
 
                 <div class="menu-icon">
@@ -276,7 +279,7 @@
 
                     </div>
 
-                    <div class="card-project working" id="second-project">
+                    <div class="card-project working inactive" id="second-project">
 
                         <div>
                             <img src="src/images/cards/card-café.png" alt="" class="card-img working">
@@ -290,7 +293,7 @@
 
                     </div>
 
-                    <div class="card-project working" id="third-project">
+                    <div class="card-project working inactive" id="third-project">
 
                         <div>
                             <img src="src/images/cards/card-café.png" alt="" class="card-img working">
@@ -313,6 +316,55 @@
                 </div>
 
 
+
+            </div>
+
+        </section>
+
+        <secttion id="contato">
+
+            <div class="page-title">
+                <h1>CONTATO</h1>
+            </div>
+
+            <div class="contact-page">
+
+
+                <div class="form">
+
+
+                    <form class="contact-form" action="" method="post">
+
+                        <label for="name">Nome:</label>
+                        <input type="name" name="name" id="name" class="short" required>
+
+                        <label for="email">E-mail:</label>
+                        <input type="email" name="email" id="email" class="short" required>
+
+                        <label for="message">Mensagem:</label>
+                        <textarea type="text" name="message" class="large" required> </textarea>
+
+                        <button type="submit">Enviar</button>
+
+                    </form>
+
+
+                </div>
+
+            </div>
+
+
+        </secttion>
+
+        <section id="rodape">
+
+            <div class="bottom-bar">
+
+                <footer>
+                    <div class="footer-logo"></div>
+                    <p>Muito obrigado pela sua visita!</p>
+                    <p>Desenvolvido por André Victor</p>
+                </footer>
 
             </div>
 

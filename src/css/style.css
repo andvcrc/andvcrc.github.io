@@ -9,10 +9,31 @@
     list-style: none;
     text-decoration: none;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
     background-image: url(../images/background/tijolos.jpg);
+}
+
+.page-title {
+    height: 20vh;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+    margin: 5% 10% 5% 10%;
+    border-bottom: solid 5px white;
+    border-radius: 5px;
+    text-shadow: 0.4em 0.4em 1px rgba(0, 0, 0, .8);
+}
+
+.page-title h1 {
+    font-size: clamp(1.75em, 4em + 3vw, 7em);
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
 }
 
 ::-webkit-scrollbar {

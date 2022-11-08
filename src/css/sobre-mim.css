@@ -4,25 +4,6 @@
     border-radius: 5em;
 }
 
-.page-title {
-    height: 20vh;
-    align-self: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    align-self: stretch;
-    margin: 5% 10% 5% 10%;
-    border-bottom: solid 5px white;
-    border-radius: 5px;
-    text-shadow: 0.4em 0.4em 1px rgba(0, 0, 0, .8);
-}
-
-.page-title h1 {
-    font-size: clamp(1.75em, 4em + 3vw, 7em);
-    text-align: center;
-    color: white;
-}
-
 .about-text {
     text-align: justify;
     text-indent: 2em;
@@ -66,7 +47,7 @@
     text-transform: uppercase;
     font-size: 1.6em;
     color: white;
-    background-color: tomato;
+    background-color: rgb(5, 170, 170);
     padding: .1em;
     border-radius: 1em;
 }

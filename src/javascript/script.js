@@ -27,6 +27,9 @@ function trocaSlide1() {
     btnSlide2.classList.remove('active')
     btnSlide3.classList.remove('active')
     slide1.classList.add('selecionado')
+    slide1.classList.remove('inactive')
+    slide2.classList.add('inactive')
+    slide3.classList.add('inactive')
     slide2.classList.remove('selecionado')
     slide3.classList.remove('selecionado')
 }
@@ -37,6 +40,9 @@ function trocaSlide2() {
     btnSlide3.classList.remove('active')
     slide1.classList.remove('selecionado')
     slide2.classList.add('selecionado')
+    slide2.classList.remove('inactive')
+    slide1.classList.add('inactive')
+    slide3.classList.add('inactive')
     slide3.classList.remove('selecionado')
 }
 
@@ -47,6 +53,9 @@ function trocaSlide3() {
     slide1.classList.remove('selecionado')
     slide2.classList.remove('selecionado')
     slide3.classList.add('selecionado')
+    slide3.classList.remove('inactive')
+    slide1.classList.add('inactive')
+    slide2.classList.add('inactive')
 }
 
 btnSlide1.addEventListener('click', trocaSlide1)
