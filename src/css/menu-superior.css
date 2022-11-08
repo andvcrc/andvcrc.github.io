@@ -54,7 +54,6 @@
 
 .menu-link:hover {
     background-color: rgb(5, 170, 170);
-    color: white;
     transition: color .5s;
 }
 
@@ -99,7 +98,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color: rgba(255, 255, 255, .4);
+    background-color: rgba(255, 255, 255, .6);
     text-align: center;
     height: 100vh;
     width: 100%;
@@ -112,7 +111,7 @@
     display: block;
 }
 
-.topp-bar.active .social-media i {
+.top-bar.active .social-media i {
     color: black;
 }
 
@@ -121,6 +120,15 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.top-bar.active .menu a {
+    color: black;
+    text-shadow: none;
+}
+
+.top-bar.active .menu a:hover {
+    color: white;
 }
 
 .top-bar.active .menu .menu-item {
