@@ -213,9 +213,14 @@
         flex-direction: column;
         margin-left: 15%;
         margin-right: 15%;
+        margin-top: 10%;
     }
 
     .conhecimentos .card {
         height: 40vh;
     }   
+
+    .about .page-title {
+        height: 25vh;
+    }
 }
