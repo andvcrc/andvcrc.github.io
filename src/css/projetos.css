@@ -132,4 +132,7 @@
     .selection {
         width: 50px;
     }
+    .card-body {
+        text-align: center;
+    }
 }
