@@ -14,6 +14,7 @@
 
 body {
     background-image: url(../images/background/tijolos.jpg);
+    max-width: 100vw;
 }
 
 .page-title {
