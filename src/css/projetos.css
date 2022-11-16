@@ -120,6 +120,18 @@
     }
 }
 
+@media (max-width: 400px) {
+    .slides {
+        height: 105vh;
+        grid-template-rows: repeat(1, 80vh) repeat(1, 20vh);
+    }
+    .card-project {
+        margin-top: 5vh;
+        align-self: flex-start;
+        height: 80vh;
+    }
+}
+
 @media (max-width: 900px) {
     .slides {
         grid-template-columns: repeat(1, 70vw);
