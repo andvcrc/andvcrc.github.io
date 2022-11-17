@@ -4,17 +4,17 @@ const btnMenu = document.querySelector('.menu-button')
 const menu = document.querySelector('.menu')
 
 function handleButtonClick(event) {
-    if(event.type === 'touchstart') event.preventDefault()
+    if (event.type === 'touchstart') event.preventDefault()
     nav.classList.toggle('active')
 }
 
 btnMenu.addEventListener('click', handleButtonClick)
 btnMenu.addEventListener('touchstart', handleButtonClick)
+
 /* ---------------------------------------------------- */
 
+/* -------------------- CARROSSEL --------------------- */
 
-
-/* ---------- BOTÃO DO CARROSSEL ---------- */
 const btnSlide1 = document.querySelector('#slide1')
 const btnSlide2 = document.querySelector('#slide2')
 const btnSlide3 = document.querySelector('#slide3')
@@ -22,43 +22,56 @@ const slide1 = document.querySelector('#first-project')
 const slide2 = document.querySelector('#second-project')
 const slide3 = document.querySelector('#third-project')
 
-function trocaSlide1() {
-    btnSlide1.classList.add('active')
-    btnSlide2.classList.remove('active')
-    btnSlide3.classList.remove('active')
-    slide1.classList.add('selecionado')
-    slide1.classList.remove('inactive')
-    slide2.classList.add('inactive')
-    slide3.classList.add('inactive')
-    slide2.classList.remove('selecionado')
-    slide3.classList.remove('selecionado')
+function trocarSlide(id) {
+    if ((id.id == 'slide1')) {
+        slide1.classList.add('selecionado')
+        slide1.classList.remove('inactive')
+        slide2.classList.add('inactive')
+        slide3.classList.add('inactive')
+        slide2.classList.remove('selecionado')
+        slide3.classList.remove('selecionado')
+    } else if ((id.id == 'slide2')) {
+        slide1.classList.remove('selecionado')
+        slide2.classList.add('selecionado')
+        slide2.classList.remove('inactive')
+        slide1.classList.add('inactive')
+        slide3.classList.add('inactive')
+        slide3.classList.remove('selecionado')
+    } else if (id.id == 'slide3') {
+        slide1.classList.remove('selecionado')
+        slide2.classList.remove('selecionado')
+        slide3.classList.add('selecionado')
+        slide3.classList.remove('inactive')
+        slide1.classList.add('inactive')
+        slide2.classList.add('inactive')
+    }
 }
 
-function trocaSlide2() {
-    btnSlide1.classList.remove('active')
-    btnSlide2.classList.add('active')
-    btnSlide3.classList.remove('active')
-    slide1.classList.remove('selecionado')
-    slide2.classList.add('selecionado')
-    slide2.classList.remove('inactive')
-    slide1.classList.add('inactive')
-    slide3.classList.add('inactive')
-    slide3.classList.remove('selecionado')
-}
+const button = document.querySelectorAll('.selection')
 
-function trocaSlide3() {
-    btnSlide1.classList.remove('active')
-    btnSlide2.classList.remove('active')
-    btnSlide3.classList.add('active')
-    slide1.classList.remove('selecionado')
-    slide2.classList.remove('selecionado')
-    slide3.classList.add('selecionado')
-    slide3.classList.remove('inactive')
-    slide1.classList.add('inactive')
-    slide2.classList.add('inactive')
-}
+document.querySelectorAll('.selection').forEach(function (button) {
 
-btnSlide1.addEventListener('click', trocaSlide1)
-btnSlide2.addEventListener('click', trocaSlide2)
-btnSlide3.addEventListener('click', trocaSlide3)
-/* ---------------------------------------- */
+    button.addEventListener('click', function (event) {
+        const elemento = event.target || event.srcElement
+        const id = elemento.id
+
+        trocarSlide(document.getElementById(id))
+
+        if (button.id == 'slide1') {
+            btnSlide1.classList.add('active')
+            btnSlide2.classList.remove('active')
+            btnSlide3.classList.remove('active')
+        } else if (button.id == 'slide2') {
+            btnSlide1.classList.remove('active')
+            btnSlide2.classList.add('active')
+            btnSlide3.classList.remove('active')
+        } else if (button.id == 'slide3') {
+            btnSlide1.classList.remove('active')
+            btnSlide2.classList.remove('active')
+            btnSlide3.classList.add('active')
+        }
+    })
+
+})
+
+/* ---------------------------------------------------- */
