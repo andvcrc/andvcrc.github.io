@@ -62,14 +62,6 @@
     color: white;
 }
 
-.cardimg.working {
-    border: none;
-}
-
-.working:hover {
-    cursor: wait;
-}
-
 .selecionado {
     grid-column: 1 / 1;
     grid-row: 1 / 1;
