@@ -55,7 +55,7 @@
 .conhecimentos {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 30vh);
+    grid-template-rows: repeat(3, 30vh);
     gap: 5em;
     margin-left: 15%;
     margin-right: 15%;
@@ -93,17 +93,30 @@
 }
 
 .card#fifth:hover {
-    color: black;
     background-image: linear-gradient(#e34f26, #e97a5b);
+    color: white;
 }
 
 .card#sixth:hover {
-    background-image: linear-gradient(to top, #78eb52, #4655b4);
+    background-image: linear-gradient(to top, #004483, #0965bb);
+    color: white;
+}
+
+.card#seventh:hover {
+    background-image: linear-gradient(to top, #78eb52, #adf794);
     color: black;
 }
 
+.card#eight:hover {
+    background-image: linear-gradient(to top, #333333, #6d6d6d);
+    color: white;
+}
+
 .card#third .arrow,
-.card#fourth .arrow {
+.card#fourth .arrow,
+.card#fifth .arrow,
+.card#sixth .arrow,
+.card#eight .arrow {
     color: white;
 }
 
@@ -139,8 +152,16 @@
     background-image: url(../images/cards/card-html.jpg);
 }
 
+.img#c-lang {
+    background-image: url(../images/cards/card-c.jpg);
+}
+
 .img#node-js {
-    background-image: url(../images/cards/card-node-c.jpg);
+    background-image: url(../images/cards/card-node.jpg);
+}
+
+.img#spring-boot {
+    background-image: url(../images/cards/card-spring-boot.jpg);
 }
 
 .card:hover .img {
