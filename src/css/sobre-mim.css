@@ -213,7 +213,7 @@
         height: auto;
         display: grid;
         grid-template-columns: repeat(2, .5fr);
-        grid-template-rows: repeat(2, 30vh);
+        grid-template-rows: repeat(4, 30vh);
         gap: 3em;
         margin-left: 15%;
         margin-right: 15%;
