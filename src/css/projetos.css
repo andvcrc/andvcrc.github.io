@@ -50,16 +50,16 @@
 }
 
 .button {
-    padding: 1em;
+    padding: .8em;
     border-radius: 1em;
-    color: black;
+    color: white;
     font-size: 1.2em;
-    transition: all .5s;
+    transition: all .2s;
+    background-color: rgb(58, 58, 58);
 }
 
 .button:hover {
-    background-color: rgb(5, 170, 170);
-    color: white;
+    background-color: rgb(19, 19, 19);
 }
 
 .selected {

@@ -37,19 +37,19 @@
     margin-top: 1em;
     text-align: center;
     text-indent: 0;
+    font-size: 1.6em;
     text-decoration: none;
-    color: white;
-    transition: all .5s;
+    color: rgb(65, 65, 65);
+    transition: all .3s;
     align-self: center;
+    background-color: rgb(175, 175, 175);
+    border-radius: 1em;
+    padding: .5em;
 }
 
 .about-text a:hover {
-    text-transform: uppercase;
-    font-size: 1.6em;
-    color: white;
-    background-color: rgb(5, 170, 170);
-    padding: .1em;
-    border-radius: 1em;
+    color: black;
+    background-color: rgb(210, 210, 210);
 }
 
 .conhecimentos {
@@ -225,6 +225,10 @@
 
     .card {
         height: 30vh;
+    }
+
+    .about-text a {
+        padding: .2em;
     }
 }
 
